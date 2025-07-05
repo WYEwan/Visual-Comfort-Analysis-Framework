@@ -3,8 +3,6 @@
 # Visual Comfort Analysis Based on Urban 3D Models and Street View Images—Taking Nanshan District of Shenzhen City as an Example
 # 基于城市三维模型和街景图像的视觉舒适度分析——以深圳市南山区为例
 
-
-
 I. Application Background and Objectives
 
 一、 应用背景与目标
@@ -183,6 +181,14 @@ Visual comfort, as an important factor in urban planning and urban renewal, is i
 以人为本是本研究的指导思想，以更全面的指标，综合考虑日照采光和街景视野对于城市视觉舒适度的影响，并以随机森林为代表的机器学习模型进行训练和预测，实现了城市视觉舒适度的求解精确性。在分析的过程中，从Unet神经网络分割工具到栅格计算工具，本研究运用了多样的ArcGIS pro工具，挖掘地图中隐藏的空间信息，体现了地理设计团队对于地理设计和研究的掌握程度。
 
 视觉舒适度作为城市规划、城市更新中的重要影响因素，在当今社会中越来越受到各界学者的重视，在我们的研究中，我们以更全面的指标解析视觉舒适度，并以分区统计和点缓冲区分析的形式针对性分析地区视觉舒适度分布规律、主导因素和改进策略，根据结果来看，在高楼密集区继续优化绿化建设，完善房屋格局构建将成为未来改善城市视觉舒适度的重要举措。在我们的研究中，指标仍然具有局限性，分析方法也有升级的空间，希望未来有更先进的研究能够更全面地解析城市视觉舒适度。
+
+Work Information:
+Creators: Wang Yi (Team Leader), Zhao Zhanyue, Jiang Ruishan
+Supervisor: Tu Wei
+
+作品信息：
+创作者：王逸（组长）、赵展悦、江锐燊
+指导老师：涂伟
 
 
 
