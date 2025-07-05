@@ -3,6 +3,8 @@
 # Visual Comfort Analysis Based on Urban 3D Models and Street View Images—Taking Nanshan District of Shenzhen City as an Example
 # 基于城市三维模型和街景图像的视觉舒适度分析——以深圳市南山区为例
 
+
+
 I. Application Background and Objectives
 
 一、 应用背景与目标
@@ -22,6 +24,8 @@ This study integrates the factors of daylighting and street object segmentation 
   传统的城市视觉舒适度分析往往只关注景观的简单分析，而忽略日照采光对于城市视觉舒适度的影响。一些以cesium为代表的三维仿真平台开始在新一轮的视觉分析中崭露头角，它们能够真实模拟城市中的光影变化，详细展示城市的空间布局和建筑结构,为视觉舒适度分析提供了精确的空间数据，同时可以作为可视化的优秀方式融入相关的研究当中。
   
   本研究综合视觉舒适度中的日照采光和街景地物分割因素，采用随机森林模型在问卷调查中获取人们对于街景地物分布和日照累计采光的综合感评分，从而预测出全城市的舒适度分布，并进一步在街道上进行线尺度的空间插值，并在面尺度上进行全市分交通小区的分布规律探索，在点尺度上进行全市地标缓冲区的舒适度分布分析，更准确地研究城市视觉舒适度分布，为城市规划者和城市更新工作者提供科学的依据，帮助他们制定出既符合视觉舒适度要求，又能提升城市美感的规划和更新方案。这不仅能够改善城市环境的整体视觉效果和视觉舒适度，还能提升居民的生活质量和城市的吸引力，为城市发展注入新的活力。
+
+
 
 II. Design Philosophy
 
@@ -51,6 +55,8 @@ II. Design Philosophy
 
 （3）基于多元视角的拓展分析。在得到视觉舒适度的分布后，尝试以交通小区的面尺度进行印证，且在与视觉舒适度联系密切的风景名胜兴趣点进行缓冲区的视觉舒适度研究，进行了更有针对性、更全面的分析
 
+
+
 III. Main Functions
 
 三、主要功能
@@ -58,6 +64,8 @@ III. Main Functions
 The main functions of this work include data processing for daylighting, data processing for street view analysis, data processing for questionnaire surveys, model training and application, and result analysis.
 
 本次作品主要功能包括日照采光部分数据处理、街景分析部分数据处理、问卷调查部分数据处理、模型训练与应用、结果分析。
+
+
 
 3.1 Data Processing for Daylighting
 
@@ -78,6 +86,8 @@ A digital surface model is created by integrating terrain raster data and buildi
 (3) Solution for the cumulative daylighting indicator for points. Input street points, then calculate the 200m field of view buffer zone, and input the previously obtained overall daylighting distribution raster. Perform zonal statistical mean values for the 200m buffer zone of each point to obtain the daylighting indicator for that point.
 
 （3）对于点的累计日照采光指标求解。输入街道点，随后求取视野200m缓冲区，再输入之前求得的日照累计总体分布栅格，针对每个点200m缓冲区分区统计均值，即可得到说有点的日照采光指标。
+
+
 
 3.2 Data Processing for Street View Analysis
 
@@ -103,6 +113,8 @@ Baidu Street View data is used to extract street view images with significant fe
 
 （4）图像空间语义统计。使用ArcGIS pro中的模型构建功能，创建模型，综合使用栅格转矢量、添加地理要素、统计地理要素等工具，量化计算各个类别的面积占比。
 
+
+
 3.3 Data Processing for Questionnaire Surveys
 
 3.3 问卷调查部分数据处理
@@ -114,6 +126,8 @@ Baidu Street View data is used to extract street view images with significant fe
 (2) Questionnaire collection and data preprocessing. After approximately 100 volunteers complete the questionnaire, summarize the results and remove abnormal samples, such as incomplete questionnaires or those with all high or all low values. After processing, the questionnaire will form a neat scoring table for input into the subsequent model training.
 
 （2）问卷搜集和数据预处理。在约100位志愿者进行问卷填写之后汇总问卷结果，对问卷结果中的异常样本进行剔除，比如问卷样本残缺的，或是全为高或者全为低的异常值。经过处理，问卷最后将形成一张规整的评分表，用于输入后续模型训练。
+
+
 
 3.4 Model Training and Prediction
 
@@ -130,6 +144,9 @@ Baidu Street View data is used to extract street view images with significant fe
 (3) Urban spatial point interpolation. Use inverse distance weighting interpolation for each point's visual comfort score to obtain the overall visual comfort distribution in Nanshan District.
 
 （3）城市空间点插值。面向每个点的视觉舒适度使用反距离权重插值，得到南山区视觉舒适度总体分布
+
+
+
 
 IV. Result Analysis and Presentation
 
@@ -152,6 +169,8 @@ Moreover, visual comfort from the perspective of scenic spots has always been a 
 我们同样可以比对南山区交通小区视觉舒适度分布图和南山区视觉舒适度插值结果，交通小区的分区统计规律和总体插值分布规律有着一定的相似性，进一步印证了在南山内部地区，舒适度普遍较低，而越向边缘靠近，舒适度越高，尤其在南北轴线上表现显著。
 
 此外，视觉舒适度在风景名胜视角一直受人们关注，因此，选取南山区风景名胜POI缓冲区研究其视觉舒适度分布结果，可以发现，南山区的大部分风景名胜区主要分布在内部地区、东部地区和北部地区。从视觉舒适度分布来看，内部地区和北部地区近南处主要呈现低值分布，在东部地区内陆部分也是如此，而在东部沿海地区风景名胜区的视觉舒适度都较好，北部地区近南处低值分布的原因可以推断为虽然位于南山北部地区，但是距离南部高楼密集带太近，因此也收到高楼的影响，但是自身绿化建设也有所欠缺，而在东部沿海地区，城市虽然邻近高楼密集带，但是绿化建设较好，高楼虽然密集，但是高楼采用更恰当的布局减小高楼遮蔽的影响，因此舒适度较好。
+
+
 
 V. Summary and Outlook
 
