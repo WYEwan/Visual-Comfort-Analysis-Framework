@@ -1,4 +1,4 @@
-# Visual-Comfort-Analysis-Framework
+# Visual Comfort Analysis Framework
 
 # Visual Comfort Analysis Based on Urban 3D Models and Street View Images—Taking Nanshan District of Shenzhen City as an Example
 # 基于城市三维模型和街景图像的视觉舒适度分析——以深圳市南山区为例
